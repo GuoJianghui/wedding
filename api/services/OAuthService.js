@@ -16,6 +16,8 @@ module.exports = {
 	},
   getAuthUrl: function(state) {
     var url = this.getClient().getAuthorizeURL(weixin.redirectUri, state || '', 'snsapi_userinfo');
+    // var url = this.getClient().getAuthorizeURLForWebsite(weixin.redirectUri, state || '', 'snsapi_userinfo')
+    debugger
     return url.replace('#wechat_redirect', '&connect_redirect=1#wechat_redirect');
   },
   getUser: function(openID) {

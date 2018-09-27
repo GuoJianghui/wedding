@@ -75,6 +75,7 @@ module.exports = function(grunt) {
 	}
 
 	// Run task functions to configure Grunt.
+	debugger
 	invokeConfigFn(taskConfigurations);
 	invokeConfigFn(registerDefinitions);
 
