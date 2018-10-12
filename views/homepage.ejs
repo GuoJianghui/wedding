@@ -9,11 +9,11 @@
       <section class="main">
         <div class="about-box pull-down <%= noAbout ? 'closed' : 'expand' %>" data-no-about="<%= noAbout %>" id="about-box">
           <h2>关于我们</strong></h2>
-          <p></p>
+          <p>我们将于新历10月26日（周五）上午11点在平度市平度诚信酒楼·宴会厅举行❤婚礼❤，欢迎各位亲朋好友参加🎉🎉🎉。</p>
           <% if (account.lastCheckin && account.lastCheckin.status != 'present') { %>
           <p></p>
           <% } else { %>
-          <p style="color:red">可在底部输入框发送祝福弹幕，参与现场抽奖，据说颜值高的和祝福多的都更有机会中奖😜。</p>
+          <p style="color:red">可在底部输入框发送祝福弹幕，为新郎新娘送上祝福😜</p>
           <% } %>
           <div class="pull-handler" id="btn-pull-down">
             <div class="rocker">
@@ -28,11 +28,24 @@
         <div class="gallery-box">
           <div class="gallery">
             <!--修改照片，data-width图片宽度，data-height图片高度，data-center-offset图片主题中线x位置-->
-            <div><img class="disable-tilt" src="/images/1-740.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
-            <div><img class="disable-tilt" data-lazy="/images/2-839.jpg" data-width="1500" data-height="1000" data-center-offset="839" /></div>
-            <div><img class="disable-tilt" data-lazy="/images/3-935.jpg" data-width="1500" data-height="1000" data-center-offset="935" /></div>
-            <div><img class="disable-tilt" data-lazy="/images/4-498.jpg" data-width="1500" data-height="1000" data-center-offset="498" /></div>
-            <div><img class="disable-tilt" data-lazy="/images/5-1043.jpg" data-width="1500" data-height="1000" data-center-offset="1043" /></div>
+            <div><img class="disable-tilt" src="http://pfuzu9bjg.bkt.clouddn.com/1.jpg" data-width="1500" data-height="1000" data-center-offset="750" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/2.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/3.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/4.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+<!--             <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/5.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/6.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+<!--             <div><img class="disable-tilt" src="http://pfuzu9bjg.bkt.clouddn.com/7.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div> -->
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/8.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/9.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/10.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/11.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/12.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/13.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/14.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/15.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/16.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div>
+            <div><img class="disable-tilt" data-lazy="http://pfuzu9bjg.bkt.clouddn.com/17.jpg" data-width="1500" data-height="1000" data-center-offset="740" /></div> -->
+
           </div>
         </div>
         <div class="wish-box <%= account.lastCheckin && account.lastCheckin.status == 'present' ? 'dock-show' : 'dock-hide' %>" id="wish-box">
@@ -42,7 +55,7 @@
                 <a href="javascript:;" class="btn-only-icon" id="btn-close-wish"><i class="iconfont icon-menu"></i> </a>
               </div>
               <div class="input-box">
-                <textarea class="weui_textarea" id="ipt-wish" placeholder="颜值高的和祝福多的都有机会中奖" rows="1"></textarea>
+                <textarea class="weui_textarea" id="ipt-wish" placeholder="" rows="1"></textarea>
               </div>
               <div class="input-right">
                 <button type="submit" class="btn-only-icon" id="btn-send-wish"><i class="iconfont icon-arrowrightcircle"></i></button>

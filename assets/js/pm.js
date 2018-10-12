@@ -370,7 +370,7 @@
         }).done(function() {
           var map = new AMap.Map('pnl-map',{
             zoom: 17,
-            center: [119.973641,36.803421]
+            center: [119.979084, 36.791932]
           });
           var marker = new AMap.Marker({
             position: map.getCenter()
@@ -380,7 +380,7 @@
           // 设置label标签
           marker.setLabel({
             offset: new AMap.Pixel(-75, -30),
-            content: "婚礼于10月26日"
+            content: "婚礼于10月26日在平度诚信酒楼·宴会厅举行，我们在此恭候大家！"
           });
         }).fail(function() {
 
