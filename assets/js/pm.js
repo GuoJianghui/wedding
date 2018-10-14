@@ -380,7 +380,7 @@
           // 设置label标签
           marker.setLabel({
             offset: new AMap.Pixel(-75, -30),
-            content: "婚礼于10月26日在平度诚信酒楼·宴会厅举行，我们在此恭候大家！"
+            content: "10月26日，我们在此恭候大家！"
           });
         }).fail(function() {
 
