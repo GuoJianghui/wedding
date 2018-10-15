@@ -4,7 +4,7 @@
   PM.tilt.init();
 
   PM.bgm = new PM.BGM($('#bgm-audio'), {
-    src: '/audios/pm_bgm2.mp3',
+    src: 'http://pfuzu9bjg.bkt.clouddn.com/%E6%88%91%E4%BB%AC%E5%A5%BD%E5%83%8F%E5%9C%A8%E5%93%AA%E8%A7%81%E8%BF%87.mp3',
     autoplay: true
   });
 
