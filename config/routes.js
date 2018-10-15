@@ -33,6 +33,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': 'HomeController.index',
+  '/wechat': 'HomeController.wechat',
+  '/getSignature': 'HomeController.getSignature',
   '/notweixin': 'HomeController.notweixin',
   '/wall': 'HomeController.wall'
 

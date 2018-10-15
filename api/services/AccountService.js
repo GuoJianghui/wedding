@@ -2,14 +2,12 @@
 module.exports = {
   getAccount: function(openID) {
     var self = this;
-    debugger
     return WxAccount.find({
       attributes: ['accountID', 'openID', 'nickName', 'sex', 'province', 'city', 'country', 'headImgUrl', 'privilege', 'lastCheckinStatus'],
       where: {
         openID: openID
       }
     }).then(function(account) {
-      debugger
       if (account && account.nickName) {
         return account.get();
       }

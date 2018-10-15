@@ -5,7 +5,6 @@ module.exports = {
 	getClient: function() {
 		if (!this.client) {
       this.client = new OAuth(weixin.appid, weixin.secret, function(openid, cb) {
-        debugger
         WxAccount.getToken(openid).nodeify(cb);
       }, function(openid, token, cb) {
         WxAccount.setToken(openid, token).nodeify(cb);
@@ -17,7 +16,6 @@ module.exports = {
   getAuthUrl: function(state) {
     var url = this.getClient().getAuthorizeURL(weixin.redirectUri, state || '', 'snsapi_userinfo');
     // var url = this.getClient().getAuthorizeURLForWebsite(weixin.redirectUri, state || '', 'snsapi_userinfo')
-    debugger
     return url.replace('#wechat_redirect', '&connect_redirect=1#wechat_redirect');
   },
   getUser: function(openID) {

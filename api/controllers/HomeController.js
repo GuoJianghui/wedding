@@ -1,5 +1,7 @@
 var Promise = require('bluebird');
 var _ = require('lodash');
+var Wechat = require('wechat-jssdk');
+const wx = new Wechat(sails.config.weixin)
 
 module.exports = {
   index: function(req, res) {
@@ -104,7 +106,6 @@ module.exports = {
   },
 
   resolve: function(req, res, next) {
-    debugger
     var code = req.query.code;
     var state = req.query.state;
     if (!code) {
@@ -113,7 +114,6 @@ module.exports = {
 
     OAuthService.getClient().getAccessToken(code, function(err, token) {
       if (err || !token || !token.data || !token.data.openid) {
-        debugger
         return res.redirect('/home/reauth' + (state ? ('?state=' + state) : ''));
       }
 
@@ -165,6 +165,20 @@ module.exports = {
         status: 'failed',
         error: err.message
       });
+    });
+  },
+  wechat: function(req, res) {
+    if(wx.jssdk.verifySignature(req.query)) {
+      res.send(req.query.echostr);
+      return;
+    }
+    res.send("error");
+  },
+  getSignature: function(req, res) {
+    wx.jssdk.getSignature(req.query.url).then(function(signatureDate) {
+      res.json(signatureDate);
+    }).catch((error) => {
+      console.error(error)
     });
   }
 };
