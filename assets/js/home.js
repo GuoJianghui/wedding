@@ -15,7 +15,7 @@
     speed: 500,
     fade: true,
     cssEase: 'linear',
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     lazyLoad: 'ondemand'
   }).on('afterChange', function(e, slick, index) {
