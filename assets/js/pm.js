@@ -572,7 +572,7 @@
    * 轮询祝福弹幕
    */
   PM.lastFeedID = 0;
-  PM.maxFeeds = 20;
+  PM.maxFeeds = 1000;
   PM.poller = new Poller(function() {
     return PM.request({
         'url': '/home/api_lastFeeds',
